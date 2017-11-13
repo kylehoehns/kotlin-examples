@@ -1,5 +1,7 @@
 package com.hoehns.demo;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 public class JavaCity {
@@ -8,12 +10,13 @@ public class JavaCity {
   private final String state;
   private final List<JavaRace> races;
 
-  public JavaCity(String name, String state, List<JavaRace> races) {
+  public JavaCity(@NotNull String name, String state, List<JavaRace> races) {
     this.name = name;
     this.state = state;
     this.races = races;
   }
 
+  @NotNull
   public String getName() {
     return name;
   }
